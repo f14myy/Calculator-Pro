@@ -136,6 +136,15 @@
     <button class="btn premium" on:click={handlePremiumFeature}>.</button>
     <button class="btn equals" on:click={handleEquals}>=</button>
   </div>
+
+  <a
+    href="https://f14my.ru"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="watermark"
+  >
+    Made by f14my
+  </a>
 </main>
 
 {#if showModal}
@@ -228,6 +237,8 @@
     width: 100%;
     max-width: 380px;
     margin: 0 auto;
+    position: relative;
+    padding-bottom: 40px; /* Space for watermark */
   }
 
   .header {
@@ -329,6 +340,25 @@
     backdrop-filter: blur(4px);
     z-index: 10;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .watermark {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+  }
+
+  .watermark:hover {
+    opacity: 1;
+    color: #6366f1;
   }
 
   .keypad {
